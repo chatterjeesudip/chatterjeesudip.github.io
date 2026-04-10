@@ -779,27 +779,44 @@
 
         <section class="timeline">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-          </div>
-
           <ol class="timeline-list">
-
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Software Dev Manager — Oracle India</h4>
+              <h4 class="h4 timeline-item-title">CAMEL Hash Table: Striking a Balance Between CPU and
+                Memory Efficiency in Main-Memory Hash Join</h4>
 
-              <span>Jan 2021 — Apr 2022</span>
+              <span>EDBT 2026</span>
               <ul class="timeline-text">
-                <li>Led cross-functional development teams delivering Oracle Cloud integrations within Agile, Scrum, and
-                  SAFe frameworks.</li>
-                <li>Designed and developed scalable Oracle Cloud solutions aligned with complex business requirements.
-                </li>
-                <li>Collaborated with business stakeholders to analyze, discuss, and resolve critical enterprise
-                  challenges.</li>
-                <li>Ensured solution delivery adhered to Agile best practices and organizational standards.</li>
+                <li>Many hash tables used in hash joins incur substantial memory
+                  consumption to guarantee constant-time lookup performance.
+                  Hash joins, which rely on these tables for probe operations, have
+                  become increasingly memory-intensive due to the growing volume of data in modern workloads. As a
+                  result, memory-efficient
+                  hash table designs are critical for maintaining overall query performance. To address this challenge,
+                  the Concise Hash Table
+                  (CHT) was introduced as a space-efficient alternative that supports hash joins while utilizing
+                  available memory more effectively. However, our experimental evaluation reveals that the
+                  performance of CHT-based hash joins degrades with increasing
+                  data volumes and large results, limiting its scalability in realworld scenarios.
+                  Modern processors attempt to hide cache and translation
+                  lookaside buffer (TLB) misses by employing out-of-order execution. However, hash table lookups are
+                  highly unpredictable,
+                  which can result in severe cache miss rates and low performance.
+                  Moreover, cache sizes in modern processors have not grown
+                  commensurately with increasing data volumes, making data
+                  prefetching and efficient cache utilization increasingly important. In this work, we propose a novel
+                  hash table, CAMEL-HT:
+                  a Cache Aware, Memory Efficient, Lightweight hash table that
+                  delivers high performance while consuming significantly less
+                  memory. Our experiments demonstrate that CAMEL-HT improves
+                  hash join performance by 2× over CHT with only a marginal
+                  increase in memory usage. CAMEL-HT consistently achieves 3×
+                  better memory efficiency compared to VIP Hashing, a state-ofthe-art pointer chasing hash table, while
+                  also outperforming it in
+                  several scenarios in terms of execution time. CAMEL-HT matches
+                  the performance of the state-of-the-art hash table designs while
+                  achieving memory efficiency comparable to the most compact
+                  hash table approaches.</li>
               </ul>
             </li>
 
