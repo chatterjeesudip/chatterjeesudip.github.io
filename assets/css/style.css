@@ -841,12 +841,34 @@ main {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
+/* .timeline-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+} */
+/* Keep your existing styles */
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
+/* Add these specifically for when timeline-text is a list (ul) */
+ul.timeline-text {
+  list-style: disc;      /* Ensures the dots appear */
+  padding-left: 20px;    /* Pulls the bullets into view */
+  margin-top: 10px;      /* Adds space above the list */
+}
+
+ul.timeline-text li {
+  margin-bottom: 8px;    /* Adds breathing room between points */
+  display: list-item;    /* Forces the element to act like a bullet point */
+}
+
+/* Optional: Colors the bullets to match your theme's accents */
+ul.timeline-text li::marker {
+  color: var(--orange-yellow-crayola); 
+}
 
 /**
  * skills 
