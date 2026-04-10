@@ -853,21 +853,27 @@ main {
   line-height: 1.6;
 }
 
-/* Add these specifically for when timeline-text is a list (ul) */
+/* This targets the list specifically */
 ul.timeline-text {
-  list-style: disc;      /* Ensures the dots appear */
-  padding-left: 20px;    /* Pulls the bullets into view */
-  margin-top: 10px;      /* Adds space above the list */
+  list-style-type: disc !important; /* Force bullets to show */
+  padding-left: 1.5rem !important;  /* Force space for the bullets */
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
+/* This targets the individual items */
 ul.timeline-text li {
-  margin-bottom: 8px;    /* Adds breathing room between points */
-  display: list-item;    /* Forces the element to act like a bullet point */
+  display: list-item !important;    /* Ensure it behaves like a list */
+  color: var(--light-gray);         /* Match your existing text color */
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 10px;              /* Space between points */
 }
 
-/* Optional: Colors the bullets to match your theme's accents */
+/* Ensuring the bullet itself is visible */
 ul.timeline-text li::marker {
-  color: var(--orange-yellow-crayola); 
+  color: var(--orange-yellow-crayola); /* Or another visible color */
+  font-size: 1.2em;
 }
 
 /**
