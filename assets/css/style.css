@@ -427,9 +427,25 @@ main {
   font-size: var(--fs-7);
 }
 
-.contact-info .contact-title:hover { color: var(--light-gray); }
 
 .contact-info address { font-style: normal; }
+
+/* 1. Normal State: Keep it on one line with dots */
+.contact-info .contact-link {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 2. Hover State: Allow wrapping and show everything */
+.contact-info:hover .contact-link {
+  white-space: normal;
+  word-break: break-all; /* Forces the email to break since there are no spaces */
+  overflow: visible;
+  text-overflow: clip;   /* Removes the dots */
+}
 
 .social-list {
   display: flex;
