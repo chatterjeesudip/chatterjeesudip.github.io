@@ -427,6 +427,8 @@ main {
   font-size: var(--fs-7);
 }
 
+.contact-info .contact-title:hover { color: var(--light-gray); }
+
 .contact-info address { font-style: normal; }
 
 .social-list {
