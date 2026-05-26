@@ -782,6 +782,35 @@
           <ol class="timeline-list">
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">SPAR-HT: A PMEM-Optimized Hash Table for Efficient Joins</h4>
+
+              <span>IDEAS 2026</span>
+              <ul class="timeline-text">
+                <li>Join processing remains a fundamental bottleneck in modern analytical database systems, particularly 
+                  when hash tables must be repeatedly constructed for recurring join workloads. While most systems
+                  build hash tables on the fly, many real-world analytical workloads entail
+                  executing joins on the same columns, making them strong candidates
+                  for persistent hash indexes. The emergence of byte-addressable persistent memory (PMem) enables database systems to store hash indexes
+                  directly in non-volatile memory and reuse them across queries, eliminating repeated build costs while reducing recovery overhead.
+                  In this paper, we investigate persistent memory–resident hash indexes
+                  for accelerating join processing in OLAP workloads operating on largely
+                  static datasets. We propose SPAR-HT: a Scalable PMem Aware, Resource-
+                  optimized Hash Table, a persistent memory–optimized hash table designed for high-concurrency analytical environments. SPAR-HT leverages
+                  the read-mostly nature of analytical workloads and adopts a rebuild-on-
+                  significant-change strategy that simplifies maintenance while achieving
+                  near O(1) lookup performance. Through a comprehensive experimental
+                  evaluation against state-of-the-art PMem-aware hashing techniques, including CCEH, Level Hashing, and Dash, we demonstrate that SPAR-HT
+                  achieves up to 2×, 5×, and 13× higher performance compared to Dash,
+                  CCEH, and Level Hashing, respectively, under low-selectivity workloads.
+                  These results highlight the effectiveness of SPAR-HT and demonstrate
+                  the potential of PMem-native indexing structures for accelerating join-
+                  intensive analytical workloads.</li>
+              </ul>
+            </li>
+
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">CAMEL Hash Table: Striking a Balance Between CPU and
                 Memory Efficiency in Main-Memory Hash Join</h4>
 
