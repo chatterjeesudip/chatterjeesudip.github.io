@@ -1383,9 +1383,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  /* .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 120px; } */
+
+  .avatar-box {
+  width: 180px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the rectangle cleanly without stretching */
+  object-position: center top; /* Keeps the head/face framed nicely */
+  display: block;
+}
 
   .info-content .name { margin-bottom: 15px; }
 
